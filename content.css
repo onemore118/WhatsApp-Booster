@@ -1,0 +1,20 @@
+.icon_btn {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.translation {
+    margin-left: 150px;
+    width: 800px;
+  }
+
+.use_btn {
+    color: #70e070;
+    font-weight: bold;
+}
+  

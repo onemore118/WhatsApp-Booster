@@ -1,0 +1,29 @@
+{
+    "name": "WhatsApp Booster",
+    "version": "0.1.0",
+    "description": "Make WhatsApp more easier to use",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://web.whatsapp.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://web.whatsapp.com/*"],
+        "js": ["content.js"],
+        "css": ["content.css"],
+        "run_at": "document_end"
+      }
+    ],
+
+    "action": {
+      "default_icon": {
+        "16": "assets/whatsapp-booster.png",
+        "24": "assets/whatsapp-booster.png",
+        "32": "assets/whatsapp-booster.png"
+      },
+      "default_title": "WhatsApp Booster",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
