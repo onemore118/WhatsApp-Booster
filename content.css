@@ -9,9 +9,12 @@
 }
 
 .translation {
-    margin-left: 150px;
-    width: 800px;
-  }
+    margin-left: 185px;
+    min-height: 100px;
+    width: 65%;
+    max-width: 700px;
+    background-color: #F0F2F5;
+}
 
 .use_btn {
     color: #70e070;
