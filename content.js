@@ -27,7 +27,7 @@
                 const footer = document.getElementsByTagName('footer')[0];
                 let transaltion_area = document.createElement('textarea');
                 transaltion_area.className = "translation";
-                transaltion_area.textContent = 'Type Something and then click the translation button';
+                transaltion_area.textContent = 'Type Something In The Chat Box And Then Click The Translation Button';
                 footer.insertBefore(transaltion_area, footer.firstChild);
 
                 let targetLanguage = 'en';

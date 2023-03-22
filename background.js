@@ -18,20 +18,6 @@ function translate(text, sourceLanguage, targetLanguage, callback) {
     .catch(error => console.log(error));
 }
 
-// // 监听来自content.js的消息
-// chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-//   // 如果消息类型为translate，则执行翻译函数
-//   if (request.type === "translate") {
-//     translate(request.text, request.sourceLanguage, request.targetLanguage, function(translatedText) {
-//       // 将翻译后的文本作为响应发送回content.js
-//       sendResponse({ text: translatedText });
-//     });
-//     // 告诉Chrome，需要异步处理sendResponse
-//     return true;
-//   }
-// });
-
-
 
 chrome.runtime.onConnect.addListener(function(port) {
   if (port.name === "translate") {
