@@ -1,8 +1,9 @@
 
 function save_options() {
-  var language = document.getElementById("language").value;
+  var target_language = document.getElementById("target_language").value;
+  var source_language = document.getElementById("source_language").value;
   
-  chrome.storage.sync.set({language: language}, function(items) {
+  chrome.storage.sync.set({target_language: target_language, source_language:source_language}, function(items) {
       // Update status to let user know options were saved.
         var status = document.getElementById('status');
         status.textContent = 'Options saved!';
@@ -13,9 +14,14 @@ function save_options() {
 }
 
 function restore_options() {
-  chrome.storage.sync.get("language", function(data) {
+  chrome.storage.sync.get(["target_language", "source_language"], function(data) {
     console.log(data);
-    document.getElementById("language").value = data.language;
+    if(data.source_language) {
+      document.getElementById("source_language").value = data.source_language;
+    }
+    if(data.target_language) {
+      document.getElementById("target_language").value = data.target_language;
+    }
   });
 }
 

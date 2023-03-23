@@ -31,9 +31,15 @@
                 footer.insertBefore(transaltion_area, footer.firstChild);
 
                 let targetLanguage = 'en';
+                let sourceLanguage = 'zh-CN'
                 //获取语种
-                chrome.storage.sync.get("language", function(result) {
-                  targetLanguage = result.language;
+                chrome.storage.sync.get(["target_language", "source_language"], function(result) {
+                  if(result.source_language) {
+                    sourceLanguage = result.source_language
+                  }
+                  if(result.target_language) {
+                    targetLanguage = result.target_language;
+                  }
                 });
 
                 document.querySelector('.icon_btn').addEventListener('click', function() {
@@ -71,7 +77,7 @@
                             // 发送翻译请求
 
                             const port = chrome.runtime.connect({name: "translate"});
-                            port.postMessage({action: "translate", text: "hello", text: all_message,  sourceLanguage: "zh-CN", targetLanguage: targetLanguage});
+                            port.postMessage({action: "translate", text: "hello", text: all_message,  sourceLanguage: sourceLanguage, targetLanguage: targetLanguage});
                             port.onMessage.addListener((message) => {
                               // 处理响应
                               transaltion_area.textContent += message.text ;  
