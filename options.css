@@ -1,0 +1,18 @@
+.container {
+    width: 280px;
+    color: #314d3e;
+}
+
+#save {
+    margin-top: 13px;
+    background-color: #efa2bd; /* 设置背景颜色 */
+    border: none; /* 去除边框 */
+    color: white; /* 设置文本颜色 */
+    text-align: center; /* 设置文本居中 */
+    text-decoration: none; /* 去除下划线 */
+    display: inline-block; /* 将按钮变成块级元素 */
+    font-size: 14px; /* 设置字体大小 */
+    border-radius: 4px; /* 设置圆角 */
+    transition-duration: 0.4s; /* 设置过渡时间 */
+    cursor: pointer; /* 将鼠标光标设置为手形 */
+}
