@@ -9,7 +9,8 @@
 }
 
 .translation {
-    margin-left: 185px;
+    /* margin-left: 185px; */
+    margin-left: 150px;
     min-height: 100px;
     width: 65%;
     max-width: 700px;

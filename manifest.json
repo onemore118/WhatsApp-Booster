@@ -1,8 +1,8 @@
 {
     "name": "WhatsApp Booster",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Make WhatsApp more easier to use",
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage"],
     "host_permissions": ["https://web.whatsapp.com/*", "https://translate.google.com/*"],
     "icons": {
       "16": "assets/whatsapp-booster16.png",
