@@ -13,6 +13,6 @@
 
 ### 界面展示
 
-![image-20230404183434392](.\README_image\image-20230404183434392.png)
+<p align="center"><img src=".\README_image\image-20230404183434392.png"></p>
 
-![image-20230404183647494](.\README_image\image-20230404183647494.png)
+<p align="center"><img src=".\README_image\image-20230404183647494.png"></p>
