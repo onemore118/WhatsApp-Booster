@@ -31,3 +31,11 @@ chrome.runtime.onConnect.addListener(function(port) {
     });
   }
 });
+
+
+// 监听程序安装和卸载事件
+chrome.runtime.onInstalled.addListener(details => {
+  if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
+    chrome.runtime.setUninstallURL('https://forms.gle/afvqLr7S1SAcKGEU8');
+  }
+});
